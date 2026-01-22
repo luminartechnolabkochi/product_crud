@@ -1,0 +1,38 @@
+#API call for adding product
+###
+POST http://127.0.0.1:8000/product/
+Content-Type: application/json
+
+{
+    "title":"printed red top",
+    "price":1650,
+    "category":"womens",
+    "size":"m",
+    "brand":"vismay"
+}
+
+#Api call for listing all product
+###
+GET http://127.0.0.1:8000/product/
+
+#api call for filtering products based on category
+###
+GET  http://127.0.0.1:8000/product?price_lt=1000&category=mens
+
+
+#Api call for fetching specific product detail
+###
+GET http://127.0.0.1:8000/product/3/
+
+#api call for update product
+###
+PUT http://127.0.0.1:8000/product/3/
+Content-Type: application/json
+
+{
+     "price": 3000,
+     "size": "m"
+}
+
+
+

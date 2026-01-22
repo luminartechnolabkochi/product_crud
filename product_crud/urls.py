@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from store.views import ProductCreateListView,ProductRetrieveUpdateDeleteView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("product/",ProductCreateListView.as_view()),
+    path("product/<int:pk>/",ProductRetrieveUpdateDeleteView.as_view()),
 ]
